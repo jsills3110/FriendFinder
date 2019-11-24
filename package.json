@@ -1,0 +1,23 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "A simple, full-stack dating app.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsills3110/FriendFinder.git"
+  },
+  "author": "Jessica Sills",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsills3110/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/jsills3110/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
