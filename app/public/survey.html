@@ -162,6 +162,22 @@
             <br>
             <button type="submit" class="btn btn-primary submit">Submit</button>
         </form>
+        <div class="modal" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="modalBody"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <br>
         <footer class="footer">
             <div class="container">
@@ -185,6 +201,7 @@
     <script type="text/javascript">
         $(".submit").on("click", function (event) {
             event.preventDefault();
+            $("#modalBody").empty();
 
             var submitInputs = $(".ranking-question");
             var submitScores = [];
@@ -204,14 +221,18 @@
                 function (data) {
 
                     // Give response here, as a modal
+                    console.log(data);
+
+                    $("#modalTitle").text("Your best match is " + data.name + "!");
+                    var matchImage = $("<img src=\"" + data.photo + "\" height=\"400\" width=\"400\">");
+                    $("#modalBody").append(matchImage);
+                    $('#myModal').modal('toggle');
 
                     // Clear the form when submitting
                     $("#name").val("");
                     $("#picture").val("");
                     $(".ranking-question").val("1");
-
                 });
-
         });
 
     </script>

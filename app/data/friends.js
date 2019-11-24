@@ -1,7 +1,7 @@
 var friendsArray = [
     {
         "name": "Ahmed",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo": "https://media.gettyimages.com/photos/portrait-middle-age-middle-eastern-man-picture-id184319745?s=612x612",
         "scores": [
             5,
             1,
